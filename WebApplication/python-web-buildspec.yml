@@ -5,12 +5,12 @@ phases:
       - "echo Build started on `date`"
       - "echo Building the Docker image..."
       - "docker build -t rambhaskar/python-web-colour ."
-      - "docker tag dvohra/python-web-colour dvohra/python-web-colour:latest"
+      - "docker tag rambhaskar/python-web-colour rambhaskar/python-web-colour:latest"
   post_build: 
     commands: 
       - "echo Build completed on `date`"
       - "echo Pushing the Docker image..."
-      - "docker push rambhaskar/python-web-colour:latest"
+      - "docker push rambhaskar/python-web-colour"
   pre_build: 
     commands: 
       - "echo Logging in to Docker Hub..."
