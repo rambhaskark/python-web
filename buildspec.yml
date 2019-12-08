@@ -1,4 +1,4 @@
-version: 0.1
+version: 0.2
 phases: 
   pre_build: 
     commands: 
@@ -9,7 +9,11 @@ phases:
       - "echo Build started on `date`"
       - "echo Building the Docker image..."
       - "docker build -t rambhaskar/python-web-colour ."
-      - "docker tag rambhaskar/python-web-colour rambhaskar/python-web-colour:latest"    
+      - "docker tag rambhaskar/python-web-colour rambhaskar/python-web-colour:latest"
+  install:
+    runtime-versions:
+      python: 3.7    
+      docker: 18
   post_build: 
     commands: 
       - "echo Build completed on `date`"
