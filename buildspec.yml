@@ -12,7 +12,7 @@ phases:
       - "docker tag rambhaskar/python-web-colour rambhaskar/python-web-colour:latest"
   install:
     runtime-versions:
-      python: 3.7    
+      python: 3.8
       docker: 18
   post_build: 
     commands: 
