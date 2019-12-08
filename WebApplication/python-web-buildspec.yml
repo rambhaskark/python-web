@@ -10,6 +10,9 @@ phases:
       - "echo Building the Docker image..."
       - "docker build -t rambhaskar/python-web-colour ."
       - "docker tag rambhaskar/python-web-colour rambhaskar/python-web-colour:latest"
+  install:
+    runtime-versions:
+      docker: 18    
   post_build: 
     commands: 
       - "echo Build completed on `date`"
