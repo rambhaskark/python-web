@@ -1,10 +1,15 @@
 version: 0.2
+env:
+  variables:
+    JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
+  parameter-store:
+    login_password: 194494-demo-password
 phases: 
   pre_build: 
     commands: 
       - "echo Logging in to Docker Hub!"
       -  password=$(aws ssm get-parameters --region us-west-2 --names 194494-demo-password --with-decryption --query Parameters[0].Value)
-      - "docker login --username=\"rambhaskar\" --password=$password"
+      - "docker login --username=\"rambhaskar\" --password=$login_password"
   build: 
     commands: 
       - "echo Build started on `date`"
