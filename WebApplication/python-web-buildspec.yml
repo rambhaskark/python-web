@@ -1,0 +1,18 @@
+--- 
+phases: 
+  build: 
+    commands: 
+      - "echo Build started on `date`"
+      - "echo Building the Docker image..."
+      - "docker build -t rambhaskar/python-web-colour ."
+      - "docker tag dvohra/python-web-colour dvohra/python-web-colour:latest"
+  post_build: 
+    commands: 
+      - "echo Build completed on `date`"
+      - "echo Pushing the Docker image..."
+      - "docker push rambhaskar/python-web-colour:latest"
+  pre_build: 
+    commands: 
+      - "echo Logging in to Docker Hub..."
+      - "docker login --username=\"rambhaskar\" --password=\"password\""
+version: 0.1
