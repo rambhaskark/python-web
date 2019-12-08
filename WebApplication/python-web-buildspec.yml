@@ -1,5 +1,9 @@
---- 
+version: 0.1
 phases: 
+  pre_build: 
+    commands: 
+      - "echo Logging in to Docker Hub!"
+      - "docker login --username=\"rambhaskar\" --password=\"password\""
   build: 
     commands: 
       - "echo Build started on `date`"
@@ -11,8 +15,3 @@ phases:
       - "echo Build completed on `date`"
       - "echo Pushing the Docker image..."
       - "docker push rambhaskar/python-web-colour"
-  pre_build: 
-    commands: 
-      - "echo Logging in to Docker Hub.!.."
-      - "docker login --username=\"rambhaskar\" --password=\"password\""
-version: 0.1
