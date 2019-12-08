@@ -1,5 +1,5 @@
 FROM python:3
-ADD ./ /
+ADD ./WebApplication/ /WebApplication/
 RUN pip install flask
 EXPOSE 5000
-CMD [ "python", "./main.py" ]
+CMD [ "python", "./WebApplication/main.py" ]
