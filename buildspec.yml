@@ -3,7 +3,8 @@ phases:
   pre_build: 
     commands: 
       - "echo Logging in to Docker Hub!"
-      - "docker login --username=\"rambhaskar\" --password-stdin"
+      -  password=$(aws ssm get-parameters --region us-west-2 --names 194494-demo-password --with-decryption --query Parameters[0].Value)
+      - "docker login --username=\"rambhaskar\" --password=$password"
   build: 
     commands: 
       - "echo Build started on `date`"
