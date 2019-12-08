@@ -13,7 +13,7 @@ phases:
   build: 
     commands: 
       - "echo Build started on `date`"
-      - "echo Building the Docker image..!!"
+      - "echo Building the Docker image...!!"
       - "docker build -t rambhaskar/python-web-colour ."
       - "docker tag rambhaskar/python-web-colour rambhaskar/python-web-colour:latest"
   install:
