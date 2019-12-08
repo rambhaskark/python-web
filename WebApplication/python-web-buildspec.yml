@@ -13,6 +13,6 @@ phases:
       - "docker push rambhaskar/python-web-colour"
   pre_build: 
     commands: 
-      - "echo Logging in to Docker Hub..."
+      - "echo Logging in to Docker Hub.!.."
       - "docker login --username=\"rambhaskar\" --password=\"password\""
 version: 0.1
