@@ -15,7 +15,7 @@ phases:
       - "echo Build started on `date`"
       - "echo Building the Docker image....!!"
       - "docker build -t rambhaskar/python-web-colour ."
-      - "docker tag rambhaskar/python-web-colour rambhaskar/python-web-colour:latest"
+      - "docker tag rambhaskar/python-web-colour rambhaskar/python-web-colour:latest"     
   install:
     runtime-versions:
       python: 3.8
@@ -25,7 +25,8 @@ phases:
       - "echo Build completed on `date`"
       - "echo Pushing the Docker image..."
       - "docker push rambhaskar/python-web-colour"
+      - printf '{"ImageURI":"image_URI"}' > imageDetail.json
 artifacts:
   files: 
-  - imagedefinitions.json
+  - imageDetail.json
   - appspec.yaml 
