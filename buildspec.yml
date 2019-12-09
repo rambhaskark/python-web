@@ -25,5 +25,3 @@ phases:
       - "echo Build completed on `date`"
       - "echo Pushing the Docker image..."
       - "docker push rambhaskar/python-web-colour"
-artifacts:
-  files: imageDetail.json 
