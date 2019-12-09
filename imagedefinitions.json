@@ -1,6 +1,6 @@
 [
     {
-        "name": "pyhton-web-colour",
+        "name": "Demo-EC2",
         "imageUri": "rambhaskar/python-web-colour:latest"
     }
 ]
