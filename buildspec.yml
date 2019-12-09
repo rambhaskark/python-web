@@ -26,6 +26,4 @@ phases:
       - "echo Pushing the Docker image..."
       - "docker push rambhaskar/python-web-colour"
 artifacts:
-  files: 
-  - imageDetail.json
-  - appspec.yaml 
+  files: imageDetail.json 
