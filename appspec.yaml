@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "Resources": [
+    {
+      "TargetService": {
+        "Type": "AWS::ECS::Service",
+        "Properties": {
+          "TaskDefinition": "arn:aws:ecs:us-west-2:502433561161:task-definition/python-web-colour:3",
+          "LoadBalancerInfo": {
+            "ContainerName": "python-web-colour",
+            "ContainerPort": 5000
+          }
+        }
+      }
+    }
+  ]
+}
