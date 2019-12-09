@@ -1,3 +1,5 @@
-{
-    "ImageURI": "rambhaskar/python-web-colour:latest"
-}
+[
+    {
+        "ImageURI": "rambhaskar/python-web-colour:latest"
+    }
+]
